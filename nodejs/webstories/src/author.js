@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import './author.css';
 
-class author extends Component {
+class Author extends Component {
   render() {
     return (
         <div>
@@ -13,4 +13,4 @@ class author extends Component {
   }
 }
 
-export default author;
+export default Author;

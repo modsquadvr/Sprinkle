@@ -1,31 +1,29 @@
 ﻿// stories.js
 
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './stories.css';
-var fs = require('fs');
-var tmp = "foo";
-
-class stories extends Component {
+const fetch = require('node-fetch');
 
 
-  render() {
-   // fs.readFile('../compiledStories/intercept.ink.json', function (err, data) {
-     //   if (err) throw err;
+const Stories = () => {
+    const [story, setStory] = useState('stories');
 
-//console.log(data);
-//});
-   // let dirCont = fs.readdirSync( '../compiledStories' );
-   // let files = dirCont.filter(dirCont => '*.json');
 
-console.log(tmp);
-   // console.log(files)
-   //let tmp = fs.readdirSync('.');
+        fetch('/api/stories/')
+            .then(response => {console.log(response);
+            return response.json();})
+            .then((values) => {
+                console.log(values);
+                setStory(values.toString());
+            });
+
+
     return (
         <div>
-          <h2>stories</h2>
+          <h2>stories: {story}</h2>
         </div>
     );
-  }
-}
 
-export default stories;
+};
+
+export default Stories;

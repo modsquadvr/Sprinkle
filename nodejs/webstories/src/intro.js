@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import './intro.css';
 
-class intro extends Component {
+class Intro extends Component {
   render() {
     return (
         <div className='intro'>
@@ -16,4 +16,4 @@ class intro extends Component {
   }
 }
 
-export default intro;
+export default Intro;

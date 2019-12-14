@@ -1,9 +1,9 @@
 import React, {component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import play from './play.js'
-import stories from './stories.js'
-import author from './author.js'
-import intro from './intro.js'
+import Play from './play.js'
+import Stories from './stories.js'
+import Author from './author.js'
+import Intro from './intro.js'
 import logo from './vicstories.svg';
 import './App.css';
 
@@ -26,10 +26,10 @@ function App() {
         </nav>
       </header>
       <Switch>
-        <Route exact path='/' component={intro} />
-        <Route exact path='/play' component={play} />
-        <Route path='/stories' component={stories} />
-        <Route path='/author' component={author} />
+        <Route exact path='/' component={Intro} />
+        <Route exact path='/play' component={Play} />
+        <Route path='/stories' component={Stories} />
+        <Route path='/author' component={Author} />
       </Switch>
     </div>
 

@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import './play.css';
 
-class play extends Component {
+class Play extends Component {
   render() {
     return (
         <div>
@@ -13,4 +13,4 @@ class play extends Component {
   }
 }
 
-export default play;
+export default Play;
