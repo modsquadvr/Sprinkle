@@ -4,7 +4,7 @@ import Play from './play.js'
 import Stories from './stories.js'
 import Author from './author.js'
 import Intro from './intro.js'
-import logo from './vicstories.svg';
+import logo from './images/vicstories.svg';
 import './App.css';
 
 function App() {
