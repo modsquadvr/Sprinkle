@@ -1,4 +1,4 @@
-﻿import { Story } from "inkjs";
+﻿import { Story } from "../external/ink-es2015.js";
 import storyContent from "../intercept.ink.json";
 
 const fetch = require('node-fetch');
