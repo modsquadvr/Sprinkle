@@ -1,5 +1,7 @@
-﻿import { Story } from "../external/ink-es2015.js";
+﻿//import { Story } from "../external/ink";
 import storyContent from "../intercept.ink.json";
+
+var Story = require('../external/ink').Story;
 
 const fetch = require('node-fetch');
 
@@ -12,10 +14,10 @@ export const ink = new Story(storyContent);
             console.log(response);
             return new Story(response)});
 
-}*/
-
+}
+*/
 export const MAKE_CHOICE = "MAKE_CHOICE";
-
+/*
 export const getGlobalVars = variablesState =>
   Object.keys(variablesState._globalVariables).reduce(
     (acc, key) => ({
@@ -93,3 +95,4 @@ export const getTags = tags =>
     GameOverError.__proto__ = Error;
   }
 
+*/

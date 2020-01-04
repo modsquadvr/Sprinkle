@@ -1,7 +1,7 @@
-﻿import { gameLoop, MAKE_CHOICE } from "./actions";
+﻿import { MAKE_CHOICE } from "./actions";
 export const INITIAL_STATE = {
   ending: false,
-  ...gameLoop()
+  //...gameLoop()
 };
 export default (state = INITIAL_STATE, { type, ...action }) => {
   switch (type) {
