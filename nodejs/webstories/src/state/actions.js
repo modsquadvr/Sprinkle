@@ -17,7 +17,7 @@ export const ink = new Story(storyContent);
 }
 */
 export const MAKE_CHOICE = "MAKE_CHOICE";
-/*
+
 export const getGlobalVars = variablesState =>
   Object.keys(variablesState._globalVariables).reduce(
     (acc, key) => ({
@@ -95,4 +95,3 @@ export const getTags = tags =>
     GameOverError.__proto__ = Error;
   }
 
-*/

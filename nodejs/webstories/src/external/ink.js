@@ -1,3 +1,7 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
 } : function (obj) {
@@ -6431,7 +6435,7 @@ if (!Number.isInteger) {
         return typeof nVal === 'number' && isFinite(nVal) && nVal > -9007199254740992 && nVal < 9007199254740992 && Math.floor(nVal) === nVal;
     };
 }
-var Story = function (_InkObject) {
+exports.Story = function (_InkObject) {
     inherits(Story, _InkObject);
 
     function Story() {
@@ -8148,6 +8152,6 @@ var Story = function (_InkObject) {
         OutputStateChange[OutputStateChange["ExtendedBeyondNewline"] = 1] = "ExtendedBeyondNewline";
         OutputStateChange[OutputStateChange["NewlineRemoved"] = 2] = "NewlineRemoved";
     })(OutputStateChange = Story.OutputStateChange || (Story.OutputStateChange = {}));
-})(Story || (Story = {}));
+})(exports.Story || (exports.Story = {}));
 
-export { Story, InkList };
+exports.InkList = InkList;
