@@ -1,13 +1,14 @@
 ﻿//import { Story } from "../external/ink";
 import storyContent from "../intercept.ink.json";
 
-var Story = require('../external/ink').Story;
+var Story = require('inkjs').Story;
 
 const fetch = require('node-fetch');
 
 export const ink = new Story(storyContent);
 
-/*export const ink = () => {
+/*
+export const ink = () => {
 
     fetch('/api/story/intercept.ink.json')
         .then(response => {
