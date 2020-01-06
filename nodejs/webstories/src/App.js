@@ -20,7 +20,7 @@ function App() {
         <h2>  Welcome to Victoria Stories</h2>
         <nav className="navbar navbar-light bg-light">
           <ul className="navbar-nav mr-auto App-link">
-            <li><Link to={'/stories'} className="nav-link">Play Stories</Link></li>
+            <li><Link to={'/stories'} className="nav-link">View Stories</Link></li>
             <li><Link to={'/author'} className="nav-link">Author your own</Link></li>
           </ul>
         </nav>
