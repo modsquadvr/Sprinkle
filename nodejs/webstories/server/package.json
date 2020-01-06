@@ -8,9 +8,9 @@
     "fs": "0.0.2"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"yarn run server\" \"yarn run client\"",
     "server": "node server.js",
-    "client": "cd .. && npm start",
+    "client": "cd .. && yarn run start",
     "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
     "lint": "eslint ."
   },
