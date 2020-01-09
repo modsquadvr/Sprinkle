@@ -1,0 +1,26 @@
+﻿#stories {
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-image: url(../images/aurora2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#stories a {
+  color: #fff;
+}
+
+.stories {
+  padding-top: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stories .btn {
+  display: inline;
+}

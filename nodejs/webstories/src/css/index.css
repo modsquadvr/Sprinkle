@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.btn-secondary {
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 2px;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}

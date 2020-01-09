@@ -1,19 +1,19 @@
 ﻿// play.js
 
-import React, { Component } from 'react';
-import './play.css';
+import React, { Component } from "react";
+import "../css/play.css";
 import { connect } from "react-redux";
 import Scene from "./Scene";
 import Choices from "./Choices";
 import Story from "./Story";
-import { makeChoice } from "./state/actions";
-import "./App.css";
+import { makeChoice } from "../state/actions";
+//import "./App.css";
 
 const Play = props =>
   props.ending ? (
     <div className="ending">🎉🎉 YOU WIN! 🎉🎉</div>
   ) : (
-    <div className="Play">
+    <div className="play container">
       <Scene tags={props.tags} />
       <Story sceneText={props.sceneText} />
       <Choices choices={props.currentChoices} makeChoice={props.makeChoice} />

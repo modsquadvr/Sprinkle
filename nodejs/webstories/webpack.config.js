@@ -1,18 +1,27 @@
 ﻿const HtmlWebpackPlugin = require("html-webpack-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
-const webpack = require('webpack');
-const webpackDevServer = require('webpack-dev-server');
+const TerserPlugin = require("terser-webpack-plugin");
+const webpack = require("webpack");
+const webpackDevServer = require("webpack-dev-server");
 
 const port = process.env.PORT || 3000;
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loaders: ["babel-loader"]
+        loaders: "babel-loader",
+        options: {
+          presets: [
+            "@babel/preset-env",
+            "@babel/react",
+            {
+              plugins: ["@babel/plugin-proposal-class-properties"]
+            }
+          ]
+        }
       },
       {
         test: /\.html$/,
@@ -24,48 +33,48 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.svg$/,
-        use: "file-loader",
+        use: "file-loader"
       },
       {
         test: /\.(jpg|png)$/,
         use: {
           loader: "file-loader",
           options: {
-            name: "[path][name].[hash].[ext]",
-          },
-        },
+            name: "[path][name].[hash].[ext]"
+          }
+        }
       }
     ]
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js'
+    path: __dirname + "/dist",
+    publicPath: "/",
+    filename: "bundle.js"
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/favicon.ico'
+      template: "./public/index.html",
+      favicon: "./public/favicon.ico"
     })
   ],
   devServer: {
     publicPath: "/",
     contentBase: "./public",
     hot: true,
-    host: 'localhost',
+    host: "localhost",
     port: port,
     historyApiFallback: {
-      index: '/'
+      index: "/"
     },
     open: true
   }
