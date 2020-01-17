@@ -1,22 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Net.NetworkInformation;
+using System.Linq;
 
 public class LocationManager : MonoBehaviour
 {
+    public static LocationManager instance;
+
     public string cur;
 
 #if UNITY_ANDROID
+
 
     public Dictionary<string, string> locationSSIDs = new Dictionary<string, string>();
 
     public float delay = 30f;
 
+    int api_v;
     AndroidJavaObject mWiFiManager;
+#endif
 
     private void Awake()
     {
+        if(instance != null)
+        {
+            DestroyImmediate(instance);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+        
+#if UNITY_ANDROID
+
         using (AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity"))
         {
             mWiFiManager = activity.Call<AndroidJavaObject>("getSystemService", "wifi");
@@ -32,8 +49,11 @@ public class LocationManager : MonoBehaviour
         locationSSIDs.Add(curSSID, "currentLocation");
 
         StartCoroutine(PollSSIDs());
+#endif
+
     }
 
+#if UNITY_ANDROID
     List<string> GetSSIDs()
     {
         List<string> ssids = new List<string>();
@@ -72,13 +92,22 @@ public class LocationManager : MonoBehaviour
                 Debug.Log(ssids[i]);
 
                 if (locationSSIDs.TryGetValue(ssids[i], out cur))
-                {
-                    Debug.Log("Setting location: " + cur);
                     break;
-                }
             }
 
             yield return new WaitForSeconds(delay);
+        }
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if(focus)
+        {
+            //stop service that checks wifi ssids
+        }
+        else
+        {
+            //start service that checks wifi ssids
         }
     }
 #endif

@@ -17,8 +17,9 @@ public class StoryManager : MonoBehaviour
     [Header("Ink")]
     [SerializeField]
     public TextAsset inkJSONAsset;
-    public Story story;
+    public Story story { get { return story; } set { story = value; usesLocations = story.variablesState.Contains("location"); } }
     List<int> choicePath = new List<int>();
+    [HideInInspector] public bool usesLocations;
 
     [Space(5)]
     public Color textColour = Color.white;
@@ -227,6 +228,10 @@ public class StoryManager : MonoBehaviour
     // Creates a new Story object with the compiled story which we can then play!
     public void StartStory()
     {
+        if (usesLocations)
+            story.variablesState["location"] = LocationManager.instance.cur;
+
+
         RestartPanel();
         RefreshView();
     }
