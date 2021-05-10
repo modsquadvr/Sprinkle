@@ -1189,9 +1189,9 @@ lodash.cond@^4.3.0:
   integrity sha1-9HGh2khr5g9quVXRcRVSPdHSVdU=
 
 lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.1:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.0.0:
   version "1.4.0"
@@ -1887,3 +1887,8 @@ yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
   integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
+
+yarn@^1.21.1:
+  version "1.22.10"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+  integrity sha512-IanQGI9RRPAN87VGTF7zs2uxkSyQSrSPsju0COgbsKQOOXr5LtcVPeyXWgwVa0ywG3d8dg6kSYKGBuYK021qeA==
